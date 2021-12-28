@@ -4,7 +4,7 @@
 
 | column             | Type   | options                   |
 | ------------------ | ------ | ------------------------- |
-| nickname           | string | null: false               |
+| name               | string | null: false               |
 | email              | string | null: false, unique: true |
 | encrypted_password | string | null: false               |
 
@@ -14,10 +14,10 @@ has_many :likes
 
 ## tweets テーブル
 
-| column     | type       | options                        |
-| ---------- | ---------- | ------------------------------ |
-| text       | string     | null: false                    |
-| user_id    | references | null: false, foreign_key: true |
+| column     | type       | options     |
+| ---------- | ---------- | ----------- |
+| text       | string     | null: false |
+| nickname   | string     | null: false |
 
 belongs_to :user
 has_many :comments
