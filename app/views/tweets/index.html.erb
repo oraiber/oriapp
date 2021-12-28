@@ -1,7 +1,17 @@
-<div class="contents">
-  <% @tweets.each do |tweet| %>
-    <div class="content_post" >
-      <p><%= tweet.text %></p>
+<main class="main">
+  <div class="inner">
+    <% @tweets.each do |tweet| %>
+    <div class="card">
+      <div class="card__body">
+        <%= link_to tweet.nickname, "#", class: :card__nickname%>
+        <p class="card__summary">
+          <%= tweet.text %>
+        </p>
+      </div>
     </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+</main>
+
+  </div>
+</main>
