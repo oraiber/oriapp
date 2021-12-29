@@ -7,6 +7,14 @@
         <p class="card__summary">
           <%= tweet.text %>
         </p>
+        <ul>
+          <li>
+            <%= link_to '編集', edit_tweet_path(tweet.id), method: :get %>
+          </li>
+          <li>
+            <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
+          </li>
+        </ul>
       </div>
     </div>
     <% end %>

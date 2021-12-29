@@ -21,7 +21,7 @@ div {
 
 }
 .inner {
-  width: 1000px;
+  width: 100vh;
   margin: 0 auto;
 }
 .nav {
@@ -89,4 +89,16 @@ div {
   color: #999;
   text-align: right;
   text-decoration: underline;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

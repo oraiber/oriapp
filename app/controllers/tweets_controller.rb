@@ -16,6 +16,26 @@ class TweetsController < ApplicationController
     end
   end
 
+  def destroy
+    @tweet = Tweet.find(params[:id])
+    if @tweet.destroy
+      redirect_to root_path
+    end
+  end
+
+  def edit
+    @tweet = Tweet.find(params[:id])
+  end
+
+  def update
+    tweet = Tweet.find(params[:id])
+    if tweet.update(tweet_params)
+      redirect_to root_path
+    else
+      render edit_tweet_path
+    end
+  end
+
   private
   def tweet_params
     params.require(:tweet).permit(:nickname, :text)
